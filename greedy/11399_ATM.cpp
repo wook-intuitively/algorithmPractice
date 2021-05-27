@@ -5,25 +5,26 @@ using namespace std;
 
 namespace ATM
 {
-    int nPerson = 0;
-    int arrayDraw[1000] = {0};
-    int main()
+int nPerson, res = 0;
+int arrayDraw[1000];
+int main()
+{
+    //input
+    scanf("%d",&nPerson);
+    for(int i =0; i<nPerson; i++)
     {
-        //input
-        scanf("%d",&nPerson);
-        for(int i =0; i<nPerson; i++)
-        {
-            scanf("%d",arrayDraw[i]);
-        }
-
-        //sorting
-        sort(arrayDraw, arrayDraw+nPerson+1);
-        for(int i=0; i<nPerson; i++)
-        {
-            printf("%d", arrayDraw[i]);
-        }
-        //cal
-
-        return 0;
+        scanf("%d",&arrayDraw[i]);
     }
+    //sorting
+    sort(arrayDraw, arrayDraw+(nPerson));
+    //cal
+    for(int i =0; i<nPerson; i++)
+    {
+        res += (nPerson-i) * arrayDraw[i];
+    }
+
+    printf("%d", res);
+
+    return 0;
+}
 }
