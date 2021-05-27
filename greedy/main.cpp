@@ -1,30 +1,26 @@
 #include <iostream>
+#include <algorithm>
 
-int big = 5;
-int small = 3;
-int total,totalTemp,result = 0;
+using namespace std;
 
+int nPerson = 3;
+int arrayDraw[1000] = {0};
 int main()
-{
-    scanf("%d", &total);
-    int qutientBig = total/big;
-
-    while(qutientBig >= 0)
     {
-        result = qutientBig;
-        totalTemp = total - qutientBig*big;
-        if(totalTemp%small != 0)
-        {
-            qutientBig --;
-        }
-        else
-        {
-            result += totalTemp/small;
-            printf("%d", result);
-            return 0;
-        }
+    //input
+    scanf("%d",&nPerson);
+    for(int i =0; i<nPerson; i++)
+    {
+        scanf("%d",arrayDraw[i]);
     }
-    printf("%d", -1);
-    return 0;
-}
 
+    //sorting
+    sort(arrayDraw, arrayDraw+nPerson+1);
+    for(int i=0; i<nPerson; i++)
+    {
+        printf("%d", arrayDraw[i]);
+    }
+    //cal
+
+    return 0;
+ }

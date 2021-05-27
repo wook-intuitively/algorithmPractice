@@ -2,13 +2,19 @@
 
 ### Mac OS ###
 #
-# General
+## General
 .DS_Store
 
 ### CLion ###
-# Complier
+## Complier
+
+#greedy
 /greedy/cmake-build-debug/
 /greedy/CMakeLists.txt
+/greedy/.vscode/
+/greedy/main.exe
 
+
+### Projects ###
 # etc Project
 /untitled/
