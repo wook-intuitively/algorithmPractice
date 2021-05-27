@@ -8,6 +8,7 @@
 ### CLion ###
 # Complier
 /greedy/cmake-build-debug/
+/greedy/CMakeLists.txt
 
 # etc Project
 /untitled/
