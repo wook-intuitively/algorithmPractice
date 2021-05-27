@@ -1,0 +1,13 @@
+
+
+### Mac OS ###
+#
+# General
+.DS_Store
+
+### CLion ###
+# Complier
+/greedy/cmake-build-debug/
+
+# etc Project
+/untitled/
