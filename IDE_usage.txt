@@ -1,0 +1,13 @@
+##### Itegrated Development Enviroment #####
+
+### Err report ###
+
+
+## VScode ##
+#".vscode/" has setting value for RUN, DEBUG.
+
+## Clion ##
+#"cmake-build-debug/, CMakeLists.txt" Always Needed.
+
+## VS ##
+# To build proj, Soultion File is needed.
