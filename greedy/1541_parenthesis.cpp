@@ -25,7 +25,6 @@ using namespace std;
  */
 namespace parenthesis
 {
-
 string str;
 string stemp = "";
 int ires = 0;
@@ -33,38 +32,42 @@ bool isMinus = false;
 
 int minRes()
 {
-    for(int i =0; i<str.length(); i++)
+    for (int i = 0; i <= str.size(); i++)
     {
         //연산자를 만나는 경우
-        if(str[i] == '+' || str[i] == '-' || str[i] == '\0')
+        if (str[i] == '+' || str[i] == '-' || str[i] == '\0')
         {
-            if(isMinus)
+            if (isMinus)
             {
-            ires += stoi(stemp);
+                ires -= stoi(stemp);
             }
             else
             {
-            ires -= stoi(stemp);
+                ires += stoi(stemp);
             }
+            stemp = "";
 
             //처음으로 minus를 만나면 isMinus를 ture로 바꿔준다
-            if(str[i] == '-') isMinus = true;
+            if (str[i] == '-') isMinus = true;
 
-            stemp = "";
+            continue;
         }
         //숫자를 만나는 경우
-        stemp = str[i];
+        stemp += str[i];
     }
+    return ires;
 }
 
-int smain()
+int main()
 {
-    scanf("%s", str);
+    //string 입력
+    cin >> str;
 
-    minRes();
+    //minRes();
 
-    printf("%d", ires);
+    printf("%d", minRes());
+
+    return 0;
 }
-
 
 }
