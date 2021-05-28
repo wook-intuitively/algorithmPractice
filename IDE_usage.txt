@@ -5,6 +5,7 @@
 
 ## VScode ##
 #".vscode/" has setting value for RUN, DEBUG.
+# debugging에서 변수가 다 표현이 안 돼.
 
 ## Clion ##
 #"cmake-build-debug/, CMakeLists.txt" Always Needed.
